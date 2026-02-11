@@ -1,0 +1,140 @@
+{
+  "header": {
+    "title": "Power Flow",
+    "titleHighlight": "Calculator",
+    "subtitle": "Power System Analysis Tool",
+    "reUpload": "Re-upload"
+  },
+  "fileUpload": {
+    "title": "Upload Network File",
+    "description": "Load your pandapower network file to start power flow analysis",
+    "processing": "Processing network file...",
+    "dropHere": "Drop to upload",
+    "dragOrClick": "Drag and drop file here, or",
+    "browse": "click to browse",
+    "supportedFormats": "Supports pandapower network formats",
+    "unsupportedFormat": "Unsupported file format. Please use: JSON, Excel, Pickle or SQLite"
+  },
+  "networkSummary": {
+    "loaded": "Network Loaded",
+    "totalComponents": "Total Components"
+  },
+  "components": {
+    "bus": "Bus",
+    "line": "Line",
+    "trafo": "Transformer",
+    "trafo3w": "3W Transformer",
+    "load": "Load",
+    "gen": "Generator",
+    "sgen": "Static Gen",
+    "ext_grid": "External Grid",
+    "shunt": "Shunt",
+    "switch": "Switch"
+  },
+  "calculationForm": {
+    "title": "Power Flow Parameters",
+    "subtitle": "Configure calculation settings",
+    "algorithm": "Algorithm",
+    "initMethod": "Init Method",
+    "maxIteration": "Max Iterations",
+    "auto": "Auto",
+    "manual": "Manual",
+    "autoDefault": "Algorithm default: {{count}}",
+    "defaultPlaceholder": "Default: {{count}}",
+    "tolerance": "Tolerance (MVA)",
+    "enforceQLims": "Enforce Q Limits",
+    "enforceQLimsDesc": "Enable generator reactive power constraints",
+    "calcVoltageAngles": "Calc Voltage Angles",
+    "calcVoltageAnglesDesc": "Calculate bus voltage angles",
+    "running": "Running power flow...",
+    "run": "Run Power Flow"
+  },
+  "algorithms": {
+    "nr": {
+      "label": "Newton-Raphson",
+      "desc": "Default, fast convergence"
+    },
+    "bfsw": {
+      "label": "Backward/Forward",
+      "desc": "For radial networks"
+    },
+    "gs": {
+      "label": "Gauss-Seidel",
+      "desc": "Simple iteration"
+    },
+    "fdbx": {
+      "label": "Fast-Decoupled BX",
+      "desc": "Transmission networks"
+    },
+    "fdxb": {
+      "label": "Fast-Decoupled XB",
+      "desc": "Alternative decoupled"
+    }
+  },
+  "initMethods": {
+    "auto": "Auto",
+    "flat": "Flat Start",
+    "dc": "DC Power Flow",
+    "results": "Previous Results"
+  },
+  "results": {
+    "failed": "Calculation Failed",
+    "convergedWarning": "Converged (with warnings)",
+    "converged": "Converged",
+    "downloading": "Downloading...",
+    "exportExcel": "Export Excel",
+    "maxLoading": "Max Loading",
+    "minVoltage": "Min Voltage",
+    "maxVoltage": "Max Voltage",
+    "resultSuffix": "Results"
+  },
+  "calculationLog": {
+    "title": "Calculation Log",
+    "iterations": "{{count}} iterations",
+    "warnings": "{{count}} warnings",
+    "warningBadge": "{{count}} warnings",
+    "algorithm": "Algorithm",
+    "initMethod": "Init Method",
+    "tolerance": "Tolerance",
+    "maxIteration": "Max Iterations",
+    "calcTime": "Calc Time",
+    "actualIterations": "Actual Iterations",
+    "slackActivePower": "Slack Active Power",
+    "slackReactivePower": "Slack Reactive Power",
+    "warningTitle": "Warnings"
+  },
+  "resultTable": {
+    "clearFilter": "Clear Filters",
+    "rows": "{{count}} rows",
+    "filteredRows": "{{filtered}} / {{total}} rows",
+    "filterPlaceholder": "Filter {{column}}...",
+    "clear": "Clear",
+    "noMatch": "No matching data",
+    "clearFilterCondition": "Clear filter",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "error": {
+    "title": "Error",
+    "uploadFailed": "Failed to upload network file",
+    "calculationFailed": "Power flow calculation failed",
+    "downloadFailed": "Failed to download results",
+    "appError": "Application Error",
+    "appErrorDesc": "An unexpected error occurred. Please reload the page.",
+    "reload": "Reload"
+  },
+  "examples": {
+    "title": "Example Cases",
+    "subtitle": "Download standard pandapower networks, modify and re-upload for analysis",
+    "selectCategory": "Select network type",
+    "download": "Download",
+    "downloading": "Downloading...",
+    "busCount": "{{count}} buses",
+    "networkCount": "{{count}} networks",
+    "loadFailed": "Failed to load example list"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "EN"
+  }
+}

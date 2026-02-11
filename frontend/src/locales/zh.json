@@ -1,0 +1,140 @@
+{
+  "header": {
+    "title": "电力潮流",
+    "titleHighlight": "计算器",
+    "subtitle": "电力系统潮流分析工具",
+    "reUpload": "重新上传"
+  },
+  "fileUpload": {
+    "title": "上传网络文件",
+    "description": "加载您的 pandapower 网络文件以开始潮流分析",
+    "processing": "正在处理网络文件...",
+    "dropHere": "松开以上传",
+    "dragOrClick": "将文件拖放到此处，或",
+    "browse": "点击浏览",
+    "supportedFormats": "支持 pandapower 网络格式",
+    "unsupportedFormat": "不支持的文件格式，请使用: JSON, Excel, Pickle 或 SQLite"
+  },
+  "networkSummary": {
+    "loaded": "网络已加载",
+    "totalComponents": "元件总数"
+  },
+  "components": {
+    "bus": "母线",
+    "line": "线路",
+    "trafo": "变压器",
+    "trafo3w": "三绕组变压器",
+    "load": "负荷",
+    "gen": "发电机",
+    "sgen": "静态发电机",
+    "ext_grid": "外部电网",
+    "shunt": "并联电容器",
+    "switch": "开关"
+  },
+  "calculationForm": {
+    "title": "潮流计算参数",
+    "subtitle": "配置计算设置",
+    "algorithm": "算法",
+    "initMethod": "初始化方法",
+    "maxIteration": "最大迭代次数",
+    "auto": "自动",
+    "manual": "手动",
+    "autoDefault": "当前算法默认: {{count}} 次",
+    "defaultPlaceholder": "默认: {{count}}",
+    "tolerance": "收敛精度 (MVA)",
+    "enforceQLims": "强制无功限制",
+    "enforceQLimsDesc": "启用发电机无功功率约束",
+    "calcVoltageAngles": "计算电压相角",
+    "calcVoltageAnglesDesc": "计算节点电压相角",
+    "running": "正在计算潮流...",
+    "run": "运行潮流计算"
+  },
+  "algorithms": {
+    "nr": {
+      "label": "牛顿-拉夫逊法",
+      "desc": "默认方法，快速收敛"
+    },
+    "bfsw": {
+      "label": "前推回代法",
+      "desc": "适用于辐射状网络"
+    },
+    "gs": {
+      "label": "高斯-赛德尔法",
+      "desc": "简单迭代方法"
+    },
+    "fdbx": {
+      "label": "快速解耦BX",
+      "desc": "输电网络"
+    },
+    "fdxb": {
+      "label": "快速解耦XB",
+      "desc": "替代解耦方法"
+    }
+  },
+  "initMethods": {
+    "auto": "自动",
+    "flat": "平启动",
+    "dc": "直流潮流",
+    "results": "使用上次结果"
+  },
+  "results": {
+    "failed": "计算失败",
+    "convergedWarning": "收敛（存在告警）",
+    "converged": "计算收敛",
+    "downloading": "下载中...",
+    "exportExcel": "导出 Excel",
+    "maxLoading": "最大负载率",
+    "minVoltage": "最低电压",
+    "maxVoltage": "最高电压",
+    "resultSuffix": "结果"
+  },
+  "calculationLog": {
+    "title": "计算日志",
+    "iterations": "{{count}} 次迭代",
+    "warnings": "{{count}} 个警告",
+    "warningBadge": "{{count}} 警告",
+    "algorithm": "算法",
+    "initMethod": "初始化方法",
+    "tolerance": "收敛容差",
+    "maxIteration": "最大迭代次数",
+    "calcTime": "计算时间",
+    "actualIterations": "实际迭代次数",
+    "slackActivePower": "平衡节点有功",
+    "slackReactivePower": "平衡节点无功",
+    "warningTitle": "警告信息"
+  },
+  "resultTable": {
+    "clearFilter": "清除筛选",
+    "rows": "{{count}} 行",
+    "filteredRows": "{{filtered}} / {{total}} 行",
+    "filterPlaceholder": "筛选 {{column}}...",
+    "clear": "清除",
+    "noMatch": "没有匹配的数据",
+    "clearFilterCondition": "清除筛选条件",
+    "yes": "是",
+    "no": "否"
+  },
+  "error": {
+    "title": "错误",
+    "uploadFailed": "上传网络文件失败",
+    "calculationFailed": "潮流计算失败",
+    "downloadFailed": "下载结果失败",
+    "appError": "应用程序出错",
+    "appErrorDesc": "发生了意外错误。请重新加载页面重试。",
+    "reload": "重新加载"
+  },
+  "examples": {
+    "title": "示例案例",
+    "subtitle": "下载 pandapower 标准网络，修改后重新上传进行分析",
+    "selectCategory": "选择网络类型",
+    "download": "下载",
+    "downloading": "下载中...",
+    "busCount": "{{count}} 节点",
+    "networkCount": "{{count}} 个网络",
+    "loadFailed": "加载示例列表失败"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "EN"
+  }
+}
