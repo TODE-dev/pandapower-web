@@ -265,6 +265,37 @@ export default function ResultTable({ title, tableData }) {
     }
   }, [filterConfig]);
 
+  useEffect(() => {
+    if (!activeFilterColumn) return;
+
+    const handlePointerDown = (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      if (target.closest('[data-filter-ui="true"]')) {
+        return;
+      }
+
+      setActiveFilterColumn(null);
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setActiveFilterColumn(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('touchstart', handlePointerDown);
+    document.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('touchstart', handlePointerDown);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [activeFilterColumn]);
+
   const tableWidth = useMemo(() => {
     return columns.reduce((sum, col) => sum + (columnWidths[col] || DEFAULT_COLUMN_WIDTH), 0);
   }, [columns, columnWidths]);
@@ -333,6 +364,7 @@ export default function ResultTable({ title, tableData }) {
                       </button>
                       <button
                         onClick={(e) => toggleFilterPopover(col, e)}
+                        data-filter-ui="true"
                         className="p-1 hover:bg-slate-700/50 rounded transition-colors flex-shrink-0 ml-1"
                       >
                         <FilterIcon active={!!filterConfig[col]} />
@@ -342,7 +374,7 @@ export default function ResultTable({ title, tableData }) {
                     <ResizeHandle onMouseDown={(e) => handleResizeStart(col, e)} />
 
                     {activeFilterColumn === col && (
-                      <div className="absolute top-full left-0 mt-1 p-2 bg-slate-800 border border-slate-600 rounded-lg shadow-xl z-50 min-w-[200px]">
+                      <div data-filter-ui="true" className="absolute top-full left-0 mt-1 p-2 bg-slate-800 border border-slate-600 rounded-lg shadow-xl z-50 min-w-[200px]">
                         <input
                           type="text"
                           placeholder={t('resultTable.filterPlaceholder', { column: col })}
@@ -441,12 +473,6 @@ export default function ResultTable({ title, tableData }) {
         </div>
       )}
 
-      {activeFilterColumn && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => setActiveFilterColumn(null)}
-        />
-      )}
     </div>
   );
 }
