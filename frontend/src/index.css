@@ -287,3 +287,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-slate-500);
 }
+
+::-webkit-scrollbar-corner {
+  background: var(--color-slate-800);
+}
